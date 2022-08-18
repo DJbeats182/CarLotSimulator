@@ -4,11 +4,21 @@ using System.Text;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {
         public Car()
         {
 
+        }
+
+        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        {
+            Year = year;
+            Make = make;
+            Model = model;
+            EngineNoise = engineNoise;
+            HonkNoise = honkNoise;
+            IsDriveable = isDriveable;  
         }
 
         public int Year { get; set; }   
@@ -18,14 +28,14 @@ namespace CarLotSimulator
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-        public static void MakeEngineNoise(Car engineNoise)
+        public void MakeEngineNoise(string engineNoise)
         {
-            Console.WriteLine("VROOM! VROOM!");
+            Console.WriteLine($"My cars engine sounds like: {engineNoise}");
         }
 
-        public static void MakeHonkNoise(Car honkNoise)
+        public void MakeHonkNoise()
         {
-            Console.WriteLine("HONK! HONK!");
+            Console.WriteLine($"My cars horn sounds like: {HonkNoise}");
         }
     }
 }
