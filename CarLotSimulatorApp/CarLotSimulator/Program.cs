@@ -51,6 +51,8 @@ namespace CarLotSimulator
                 item.MakeHonkNoise();
                 Console.WriteLine();
             }
+           CarLot.numberOfCars =  myCarLot.ListOfCars.Count;
+           Console.WriteLine($"There are {CarLot.numberOfCars} cars in the Car Lot.");   
 
             //Now that the Car class is created we can instanciate 3 new cars - DONE
             //Set the properties for each of the cars - DONE
